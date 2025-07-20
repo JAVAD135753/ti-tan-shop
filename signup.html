@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ثبت‌نام در تی‌ تان شاپ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>ثبت‌نام در تی‌ تان شاپ</h1>
+    <nav>
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره ما</a>
+      <a href="contact.html">تماس با ما</a>
+      <a href="signup.html">ثبت‌نام</a>
+    </nav>
+  </header>
+
+  <main>
+    <form onsubmit="handleSignup(event)">
+      <label>نام کاربری:</label>
+      <input type="text" id="username" required><br>
+      <label>ایمیل:</label>
+      <input type="email" id="email" required><br>
+      <label>رمز عبور:</label>
+      <input type="password" id="password" required><br>
+      <button type="submit">ثبت‌نام</button>
+    </form>
+    <p id="message"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 تی‌ تان شاپ</p>
+  </footer>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      document.getElementById("message").innerText = `خوش آمدی ${username}! ثبت‌نام موفق بود.`;
+    }
+  </script>
+</body>
+</html>
